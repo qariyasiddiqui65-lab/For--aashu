@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For AASHU ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#ffd9ec,#ffc7e3,#ffe7f3);
+overflow:auto;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+#hearts{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:auto;
+z-index:-1;
+
+}
+
+.heart{
+
+position:absolute;
+font-size:20px;
+animation:float 10s linear infinite;
+opacity:.6;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(110vh) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+}
+
+}
+
+.card{
+
+width:92%;
+max-width:760px;
+
+background:rgba(255,255,255,.35);
+
+backdrop-filter:blur(18px);
+
+padding:35px;
+
+border-radius:30px;
+
+box-shadow:0 20px 50px rgba(255,105,180,.25);
+
+text-align:center;
+
+display:none;
+
+animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.openScreen{
+
+position:absolute;
+width:100%;
+height:100%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(135deg,#ffd9ec,#ffc7e3,#ffe7f3);
+
+}
+
+.box{
+
+background:white;
+padding:40px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 20px 45px rgba(255,105,180,.25);
+
+width:330px;
+
+}
+
+.envelope{
+
+font-size:70px;
+
+animation:bounce 1.8s infinite;
+
+}
+
+@keyframes bounce{
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+.box h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:42px;
+
+color:#ff3b88;
+
+margin-top:15px;
+
+}
+
+.box p{
+
+margin-top:10px;
+
+color:#666;
+
+line-height:28px;
+
+}
+
+#open{
+
+margin-top:25px;
+
+padding:14px 35px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff4b94;
+
+color:white;
+
+font-size:17px;
+
+cursor:pointer;
+
+}
+
+h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:60px;
+
+color:#ff3b88;
+
+margin-bottom:25px;
+
+}
+
+#message{
+
+font-size:18px;
+
+line-height:34px;
+
+color:#555;
+
+white-space:pre-line;
+
+text-align:left;
+
+}
+
+.buttons{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+button{
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+#yes{
+
+background:#ff4b94;
+
+color:white;
+
+}
+
+#no{
+
+background:white;
+
+color:#ff4b94;
+
+}@keyframes glow{
+
+0%,100%{
+
+box-shadow:0 0 10px rgba(255,105,180,.3);
+
+}
+
+50%{
+
+box-shadow:0 0 25px rgba(255,105,180,.7);
+
+}
+
+}
+
+#open{
+
+animation:glow 2s infinite;
+
+transition:.3s;
+
+}
+
+#open:hover{
+
+transform:scale(1.06);
+
+}
+
+#yes{
+
+transition:.3s;
+
+}
+
+#yes:hover{
+
+transform:scale(1.08);
+
+}
+
+#no{
+
+position:relative;
+
+transition:.2s;
+
+}
+
+audio{
+
+display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<div class="openScreen">
+
+<div class="box">
+
+<div class="envelope">
+
+💌
+
+</div>
+
+<h1>
+
+For AASHU ❤️
+
+</h1>
+
+<p>
+
+Someone spent time making this...
+
+Please don't leave without reading till the end. 🥹
+
+</p>
+
+<button id="open">
+
+Open My Heart ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<div class="card" id="card">
+
+<h2>
+
+Dear AASHU ❤️
+
+</h2>
+
+<div id="message">
+
+</div>
+
+<div class="buttons">
+
+<button id="yes">
+
+Forgive Me ❤️
+
+</button>
+
+<button id="no">
+
+Not Yet 🙈
+
+</button>
+
+</div>
+
+</div>
+
+<audio id="music" loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+
+const text = `I know shayad tum abhi mujhse naraz ho...
+
+Mujhe bas itna kehna tha...
+
+I'm really, really sorry. 🥺
+
+Kabhi kabhi gusse mein ya emotions mein hum woh bol dete hain jo humein nahi bolna chahiye...
+
+Believe me...
+
+Maine kabhi jaan-bujhkar tumhe hurt nahi kiya.
+
+Tum meri smile ho...
+
+Meri habit ho...
+
+Aur meri life ka woh part ho jiske bina sab kuch incomplete lagta hai.
+
+Main perfect nahi hoon...
+
+Par meri feelings tumhare liye hamesha real thi.
+
+Aur rahengi.
+
+I LOVE YOU ❤️
+
+Please maan jao na...
+
+ILYY FOREVER. ❤️`;
+
+const msg = document.getElementById("message");
+let i = 0;
+function typeWriter(){
+
+if(i<text.length){
+
+msg.textContent += text.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,35);
+
+}
+
+}
+
+const openBtn=document.getElementById("open");
+
+const openScreen=document.querySelector(".openScreen");
+
+const card=document.getElementById("card");
+
+const music=document.getElementById("music");
+
+openBtn.onclick=function(){
+
+openScreen.style.display="none";
+
+card.style.display="block";
+
+if (music) {   music.play().catch(() => {}); }
+
+typeWriter();
+
+}
+
+for(let i=0;i<40;i++){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.animationDuration=(6+Math.random()*6)+"s";
+
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+heart.style.animationDelay=Math.random()*5+"s";
+
+document.getElementById("hearts").appendChild(heart);
+
+}
+
+const no=document.getElementById("no");
+
+no.addEventListener("click",()=>{
+
+const x=Math.random()*(window.innerWidth-120);
+
+const y=Math.random()*(window.innerHeight-80);
+
+no.style.position="fixed";
+
+no.style.left=x+"px";
+
+no.style.top=y+"px";
+
+});
+
+document.getElementById("yes").onclick=function(){
+
+alert("🥹❤️ Thank youuu!!\n\nYou just made my day.\n\nI promise I'll keep choosing you, every single day.\n\nILYY FOREVER AASHU ❤️🌸");
+
+}
+
+</script>
+
+</body>
+</html>
+
